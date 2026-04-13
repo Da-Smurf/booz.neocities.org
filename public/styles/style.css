@@ -1,0 +1,165 @@
+/* CSS is how you can add style to your website, such as colors, fonts, and positioning of your
+   HTML content. To learn how to do something, just try searching Google for questions like
+   "how to change link color." */
+@import url('https://fonts.googleapis.com/css2?family=Comic+Sans+MS&family=Quicksand&display=swap');
+
+:root {
+	--main-orange-color:#ffa03b !important;
+	--main-green-color:#1CAB4F !important;
+	--secondary-green-color:#404d44 !important;
+	/* Break */
+	--theme-success-color:#00895b !important;
+	--theme-success-color-secondary:#00895b1c;
+	--theme-alert-color:#ff005a !important;
+	--theme-alert-color-secondary:#ff005a1c;
+  /* Break */
+  --theme-white-color:#dcddde;
+  --theme-white-color-secondary:#b9bbbe;
+  --theme-white-color-tertiary:#969696;
+  --theme-white-color-quaternary:#36393f;
+  --theme-black-color:rgb(8, 8, 8);
+  --theme-black-color-secondary: rgb(5, 5, 5);
+  --theme-black-color-secondary-alt: rgb(15, 15, 15);
+  --theme-black-color-tertiary: black;
+  --theme-black-color-accent: rgb(15, 15, 15);
+  --theme-black-color-floating: black;
+  --test-theme:#00fe8b;
+  --test-theme1:#00bd67;
+  --theme-test:#fa5760;
+  --theme-a:#513aff;
+}
+
+body, html {
+  background-color: #5394c4;
+  background-image: url("../images/bg land.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width:100%;
+  margin: 0;
+  font-family: 'Quicksand', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+.bg-image {
+  background-image: url("../images/bg land.png");
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-size: cover;
+  z-index: 1;
+}
+
+
+.under-prog {
+  background-image: url("../images/under.5655ca7.gif");
+  background-position: top 25% center;
+  background-repeat: repeat-x;
+  background-size: auto;
+  height: 100%;
+  width: 100%;
+}
+
+.fg-text {
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.4);
+  color: white;  
+  border: 3px solid #f1f1f1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 20%;
+  padding: 20px;
+  text-align: center;
+  overflow:hidden;
+}
+
+.fg-imageyo img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.sc-list {
+  list-style-position: outside;
+  text-align: left;
+  margin-left: 30px;
+  list-style-type: square;
+  text-shadow: 0 0 3px white
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltip-text {
+  visibility: hidden;
+  width: 120px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -60px;
+
+  opacity: 0;
+  transition: opacity 0.3s; 
+}
+
+.tooltip .tooltip-text::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+h1, h2, h3, h4, h5 {
+  color: White;
+  text-align: center;
+  text-shadow: 0 0 3px white;
+}
+
+p {
+  font-size: 20px;
+  text-shadow: 0 0 3px white;
+}
+
+.footer {
+  font-size:12px;
+  text-shadow: 0 0 2px white;
+}
+
+.stuff {
+  background: #C9FFFA;
+}
+
+
+.broider {
+    border-image:  url("data:image/png;base64,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") 28 /  28px / 0 round;
+    border-width:  28px;
+    border-style:  solid;
+}

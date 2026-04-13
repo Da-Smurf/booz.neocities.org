@@ -1,0 +1,93 @@
+  /* sidenav buttons formatting */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 88px);
+    justify-content: center;
+    gap: 4px;
+    margin: 10px 35px;
+  }
+
+  .grid img {
+    width: 88px;
+    height: 31px;
+    display: block;
+  }
+  
+  a img:hover, a:focus img {
+		filter: drop-shadow(1px 1px 0 var(--gradientTop)) drop-shadow(-1px 1px 0 var(--gradientTop)) drop-shadow(1px -1px 0 var(--gradientTop)) drop-shadow(-1px -1px 0 var(--gradientTop));
+		cursor: url(/images/cursors/ArrowCursor.png), auto;
+	}
+	/* textarea formatting */
+	nav textarea {
+	  font-family: 'Quicksand';
+	  border-color: var(--gradientTop);
+	  background: var(--gradientBottom);
+	  color: var(--text); 
+	  cursor: url(/images/cursors/IBeamCursor.png), auto;
+	}
+	
+	/* scrolling */
+	section[id^=marquee], div[id^=marquee] {
+	  overflow: hidden;
+    width: 100%;
+  }
+	
+	div[id=track] {
+	  display: flex;
+    gap: 8px;
+    width: max-content;
+
+    animation: scroll 30s linear infinite;
+	}
+	
+	div[id=track] img {
+    height: 31px;
+  }
+  
+  section[id^=marquee]:hover div[id=track], div[id^=marquee]:hover div[id=track] {
+    animation-play-state: paused;
+  }
+	
+	@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+  }
+
+  /* Sidebar */
+  div[id=navbar] {
+  flex: 1 1 9%
+  }
+  
+  nav a[id="nobutt"] {
+  background: none;
+  display: inline-block;
+  }
+  
+  /* blinkies formatting */
+	footer div[id=blinkies] {
+	  display: grid;
+    justify-content: center;
+    gap: 2px;
+    grid-template-columns: repeat(5, max-content);
+	}
+	
+	img[src$='alltalkandnobite.gif'] {
+	  width: 150px; /* set the stupid griefer thing */
+	}
+	
+	@media (max-width: 900px) {
+    footer div[id=blinkies] {
+        grid-template-columns: repeat(3, max-content);
+    }
+  }
+
+	
+  @media (max-width: 600px) {
+    footer div[id=blinkies] {
+      grid-template-columns: repeat(2, max-content);
+    }
+  }

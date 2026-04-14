@@ -1,0 +1,15 @@
+const path = require("path");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+
+module.exports = {
+    mode: "production",
+    
+    // Controls how much information Webpack prints to the console
+    stats: {
+    errorDetails: true, // include full error stack/details
+    },
+
+    entry: "./src/assets/js/main.js", // Main Entry
+
+    
+}

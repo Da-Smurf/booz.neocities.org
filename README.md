@@ -1,9 +1,7 @@
 # Bozone
 
-Repo for my [neocities](https://booz.neocities.org/) page.
-
-Insert text here.
-Busy Boozy.
+Git repo for my [neocities](https://booz.neocities.org/) page.
+This website uses [AutoSite-Legacy](https://github.com/dotcomboom/AutoSite-Legacy).
 
 **WORK IN PROGRESS**
 
@@ -14,10 +12,10 @@ Busy Boozy.
                 <th> Folder </th>
                 <th> Contents </th>
         </tr>
-        <tr>
+        <!-- <tr>
                 <td> extra/ </td>
                 <td> Files blacklisted by Neocities </td>
-        </tr>
+        </tr> -->
         <tr>
                 <td> includes/ </td>
                 <td> Files that autosite shouldn't interfer with </td>

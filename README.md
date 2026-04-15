@@ -1,9 +1,7 @@
 # Bozone
 
-Git repo for my [neocities](https://booz.neocities.org/) page.
+Git repo for my [neocities](https://booz.neocities.org/) page.  
 This website uses [AutoSite-Legacy](https://github.com/dotcomboom/AutoSite-Legacy).
-
-**WORK IN PROGRESS**
 
 ## File Structure
 

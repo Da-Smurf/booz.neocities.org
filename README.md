@@ -1,7 +1,7 @@
 # Bozone
 
-Git repo for my [neocities](https://booz.neocities.org/) page.  
-This website uses [AutoSite-Legacy](https://github.com/dotcomboom/AutoSite-Legacy).
+Git repo for my [neocities](https://booz.neocities.org/) page.\
+This website uses [AutoSite-Legacy](https://github.com/dotcomboom/AutoSite-Legacy) for generating pages, and [Deploy to Neocities](https://github.com/marketplace/actions/deploy-to-neocities) for deployment to Neocities.
 
 ## File Structure
 
@@ -10,10 +10,10 @@ This website uses [AutoSite-Legacy](https://github.com/dotcomboom/AutoSite-Legac
                 <th> Folder </th>
                 <th> Contents </th>
         </tr>
-        <!-- <tr>
+        <tr>
                 <td> extra/ </td>
                 <td> Files blacklisted by Neocities </td>
-        </tr> -->
+        </tr> 
         <tr>
                 <td> includes/ </td>
                 <td> Files that autosite shouldn't interfer with </td>

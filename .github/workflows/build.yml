@@ -9,7 +9,7 @@ on:
       - main
 
 concurrency:
-  group: deploy-to-neocities
+  group: build
   cancel-in-progress: true
 
 jobs:

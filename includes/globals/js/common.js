@@ -41,3 +41,8 @@ document.querySelectorAll("time").forEach(el => {
 
   el.textContent = new Intl.DateTimeFormat(undefined, options).format(date);
 });
+
+var list = document.getElementById('blogs');
+var blogout = document.getElementById('blogout');
+
+blogout.innerText = list.children.length;

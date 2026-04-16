@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>redirect</title>
+    <link href="globals/css/fonts/fonts.css" rel="stylesheet" type="text/css" media="all">
+</head>
+<body>
+    <h1 style="text-align: center;font-family: 'Genotheta', 'Audiowide';">you weren't supposed to be here</h1>
+    <h2 style="text-align: center;font-family: 'Genotheta', 'Audiowide';"><a href="home/index.html">GO BACK</a></h2>
+<script>
+  const urlParams = new URLSearchParams(window.location.search);
+
+  if (navigation.userAgent === 'Screenjesus') {
+    window.location.replace("home/index.html") //set neocities thumbnail
+  };
+
+  if (urlParams.get('redirect') !== 'no') {
+    window.location.href = 'home/index.html';
+  }
+</script>
+</body>
+</html>

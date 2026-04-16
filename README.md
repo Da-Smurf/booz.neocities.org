@@ -23,6 +23,10 @@ This website uses [AutoSite-Legacy](https://github.com/dotcomboom/AutoSite-Legac
                 <td> Files to be built by autosite </td>
         </tr>
         <tr>
+                <td> public/ </td>
+                <td> Archived </td>
+        </tr>
+        <tr>
                 <td> templates/ </td>
                 <td> Files autosite uses to build the contents of pages/ </td>
         </tr>

@@ -22,7 +22,7 @@
     <!-- main -->
     <div class="container">
       <header>
-        <span>[#title#]</span>
+        <span>[#headertitle#]</span>
       </header>
       <div class="small">
         <nav>
@@ -88,10 +88,10 @@
         </div>
         <nav>
           <div>
-            <img src="[pagetype!=404][#root#][/pagetype!=]globals/images/bozone.gif" alt="bozone" loading="lazy" id="nobutt">
+            <img src="[pagetype!=404][#root#][/pagetype!=]globals/images/bozone.gif" alt="bozone" loading="lazy" class="nobutt">
             <textarea class="linked" readonly="readonly" style="width:250px;height:86px;resize:none;scrollbar-gutter:stable;">
 																																				<a href="https://booz.neocities.org/">
-																																					<img src="https://booz.neocities.org/images/bozone.gif" alt="the bo-zone" loading="lazy">
+																																					<img src="https://booz.neocities.org/globals/images/bozone.gif" alt="the bo-zone" loading="lazy">
 																																					</a>
 																																				</textarea>
           </div>
@@ -123,6 +123,8 @@
       </span>
       <br>
       <p>Last Updated: 16/04/2026
-    </footer> [pagetype=404] <script src="[#root#]js/not_found.js"></script>[/pagetype=]
+    </footer>
+    [pagetype=404]<script src="[#root#]globals/js/not_found.js"></script>[/pagetype=]
+    <script src="[pagetype!=404][#root#][/pagetype!=]globals/js/common.js"></script>
   </body>
 </html>

@@ -1,0 +1,256 @@
+/*
+┏━━━━━━━━━━━┓
+┃  SIDEBAR  ┃
+┗━━━━━━━━━━━┛
+*/
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 88px);
+  justify-content: center;
+  gap: 4px;
+  margin: 10px 35px;
+}
+
+.grid img {
+  width: 88px;
+  height: 31px;
+  display: block;
+}
+
+a img:hover,
+a:focus img {
+  filter: drop-shadow(1px 1px 0 var(--gradientTop))
+    drop-shadow(-1px 1px 0 var(--gradientTop))
+    drop-shadow(1px -1px 0 var(--gradientTop))
+    drop-shadow(-1px -1px 0 var(--gradientTop));
+  cursor: url(/images/cursors/ArrowCursor.png), auto;
+}
+
+nav textarea {
+  font-family: "Quicksand";
+  border-color: var(--gradientTop);
+  background: var(--gradientBottom);
+  color: var(--text);
+  cursor: url(/images/cursors/IBeamCursor.png), auto;
+}
+
+/* div[id="navbar"] {
+  flex: 1 1 9%;
+} */
+
+.nobutt {
+  margin: 5px;
+  padding: 2px 7px;
+  display: inline-block;
+}
+
+/*
+┏━━━━━━━━━━━┓
+┃   HOME    ┃
+┗━━━━━━━━━━━┛
+*/
+section[id^="marquee"],
+div[id^="marquee"] {
+  overflow: hidden;
+  width: 100%;
+}
+
+div[id="track"] {
+  display: flex;
+  gap: 8px;
+  width: max-content;
+
+  animation: scroll 30s linear infinite;
+}
+
+div[id="track"] img {
+  height: 31px;
+}
+
+section[id^="marquee"]:hover div[id="track"],
+div[id^="marquee"]:hover div[id="track"] {
+  animation-play-state: paused;
+}
+
+.hoverable {
+  background: -webkit-linear-gradient(
+    330deg,
+    #1ea24d,
+    #0c4720,
+    #1ea24d,
+    #0c4720,
+    #1ea24d,
+    #0c4720,
+    #1ea24d,
+    #0c4720
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.2s ease;
+}
+.hoverable:hover,
+.fancy-text:focus {
+  -webkit-text-fill-color: white;
+  background: none;
+}
+h4 time {
+  color: var(--text);
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/*
+┏━━━━━━━━━━━┓
+┃  SOCIAL   ┃
+┗━━━━━━━━━━━┛
+*/
+    .tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltip-text {
+  visibility: hidden;
+  width: 120px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -60px;
+
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip .tooltip-text::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+.sociallink {
+  color: var(--text);
+}
+
+/*
+┏━━━━━━━━━━━┓
+┃  LINKS    ┃
+┗━━━━━━━━━━━┛
+*/
+  ul.links li a {
+    text-decoration: none;
+  }
+  /* buttons stuff */
+  div.extrabutt {
+    display: grid;
+    grid-template-columns: repeat(6, max-content);
+    justify-content: center;
+    margin: 10px 12px;
+    gap: 2px;
+  }
+
+  @media (max-width: 900px) {
+   div.extrabutt {
+     grid-template-columns: repeat(7, max-content);
+     margin: unset;
+     gap: unset;
+   }
+  }
+
+  @media (max-width: 600px) {
+   div.extrabutt {
+     grid-template-columns: repeat(4, max-content);
+     margin: unset;
+     gap: unset;
+   }
+  }
+  /* prophecy thing */
+  span.deltaprophecy {
+   background: -webkit-linear-gradient(330deg, #073cfe, #3a8eff, #4ec2f5, #7bffff, #4ec2f5, #3a8eff, #073cfe);
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+   /*text-shadow: 0 0 3px white;*/
+   animation: telp 0.6s linear infinite;
+  }
+
+  @keyframes telp {
+    0% {
+    background: -webkit-linear-gradient(330deg, #073cfe, #3a8eff, #4ec2f5, #7bffff, #4ec2f5, #3a8eff, #073cfe);
+    -webkit-background-clip: text;
+    }
+    16% {
+    background: -webkit-linear-gradient(330deg, #3a8eff, #4ec2f5, #7bffff, #4ec2f5, #3a8eff, #073cfe, #3a8eff);
+    -webkit-background-clip: text;
+    }
+    33% {
+    background: -webkit-linear-gradient(330deg, #4ec2f5, #7bffff, #4ec2f5, #3a8eff, #073cfe, #3a8eff, #4ec2f5);
+    -webkit-background-clip: text;
+    }
+    50% {
+    background: -webkit-linear-gradient(330deg, #7bffff, #4ec2f5, #3a8eff, #073cfe, #3a8eff, #4ec2f5, #7bffff);
+    -webkit-background-clip: text;
+    }
+    66% {
+    background: -webkit-linear-gradient(330deg, #4ec2f5, #3a8eff, #073cfe, #3a8eff, #4ec2f5, #7bffff, #4ec2f5);
+    -webkit-background-clip: text;
+    }
+    83% {
+    background: -webkit-linear-gradient(330deg, #3a8eff, #073cfe, #3a8eff, #4ec2f5, #7bffff, #4ec2f5, #3a8eff);
+    -webkit-background-clip: text;
+    }
+    100% {
+    background: -webkit-linear-gradient(330deg, #073cfe, #3a8eff, #4ec2f5, #7bffff, #4ec2f5, #3a8eff, #073cfe);
+    -webkit-background-clip: text;
+    }
+  }
+
+/*
+┏━━━━━━━━━━━┓
+┃  FOOTER   ┃
+┗━━━━━━━━━━━┛
+*/
+footer div[id="blinkies"] {
+  display: grid;
+  justify-content: center;
+  gap: 2px;
+  grid-template-columns: repeat(5, max-content);
+}
+
+img[src$="alltalkandnobite.gif"] {
+  width: 150px; /* set the stupid griefer thing */
+}
+
+@media (max-width: 900px) {
+  footer div[id="blinkies"] {
+    grid-template-columns: repeat(3, max-content);
+  }
+}
+
+@media (max-width: 600px) {
+  footer div[id="blinkies"] {
+    grid-template-columns: repeat(2, max-content);
+  }
+}

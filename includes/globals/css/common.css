@@ -106,6 +106,126 @@ h4 time {
   }
 }
 
+/*
+┏━━━━━━━━━━━┓
+┃  SOCIAL   ┃
+┗━━━━━━━━━━━┛
+*/
+    .tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltip-text {
+  visibility: hidden;
+  width: 120px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -60px;
+
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip .tooltip-text::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+.sociallink {
+  color: var(--text);
+}
+
+/*
+┏━━━━━━━━━━━┓
+┃  LINKS    ┃
+┗━━━━━━━━━━━┛
+*/
+  ul.links li a {
+    text-decoration: none;
+  }
+  /* buttons stuff */
+  div.extrabutt {
+    display: grid;
+    grid-template-columns: repeat(6, max-content);
+    justify-content: center;
+    margin: 10px 12px;
+    gap: 2px;
+  }
+
+  @media (max-width: 900px) {
+   div.extrabutt {
+     grid-template-columns: repeat(7, max-content);
+     margin: unset;
+     gap: unset;
+   }
+  }
+
+  @media (max-width: 600px) {
+   div.extrabutt {
+     grid-template-columns: repeat(4, max-content);
+     margin: unset;
+     gap: unset;
+   }
+  }
+  /* prophecy thing */
+  span.deltaprophecy {
+   background: -webkit-linear-gradient(330deg, #073cfe, #3a8eff, #4ec2f5, #7bffff, #4ec2f5, #3a8eff, #073cfe);
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+   /*text-shadow: 0 0 3px white;*/
+   animation: telp 0.6s linear infinite;
+  }
+
+  @keyframes telp {
+    0% {
+    background: -webkit-linear-gradient(330deg, #073cfe, #3a8eff, #4ec2f5, #7bffff, #4ec2f5, #3a8eff, #073cfe);
+    -webkit-background-clip: text;
+    }
+    16% {
+    background: -webkit-linear-gradient(330deg, #3a8eff, #4ec2f5, #7bffff, #4ec2f5, #3a8eff, #073cfe, #3a8eff);
+    -webkit-background-clip: text;
+    }
+    33% {
+    background: -webkit-linear-gradient(330deg, #4ec2f5, #7bffff, #4ec2f5, #3a8eff, #073cfe, #3a8eff, #4ec2f5);
+    -webkit-background-clip: text;
+    }
+    50% {
+    background: -webkit-linear-gradient(330deg, #7bffff, #4ec2f5, #3a8eff, #073cfe, #3a8eff, #4ec2f5, #7bffff);
+    -webkit-background-clip: text;
+    }
+    66% {
+    background: -webkit-linear-gradient(330deg, #4ec2f5, #3a8eff, #073cfe, #3a8eff, #4ec2f5, #7bffff, #4ec2f5);
+    -webkit-background-clip: text;
+    }
+    83% {
+    background: -webkit-linear-gradient(330deg, #3a8eff, #073cfe, #3a8eff, #4ec2f5, #7bffff, #4ec2f5, #3a8eff);
+    -webkit-background-clip: text;
+    }
+    100% {
+    background: -webkit-linear-gradient(330deg, #073cfe, #3a8eff, #4ec2f5, #7bffff, #4ec2f5, #3a8eff, #073cfe);
+    -webkit-background-clip: text;
+    }
+  }
 
 /*
 ┏━━━━━━━━━━━┓

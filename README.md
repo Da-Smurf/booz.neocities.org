@@ -1,5 +1,6 @@
 # Bozone
 
+[![Deploy to neocities](https://github.com/Da-Smurf/booz.neocities.org/actions/workflows/build.yml/badge.svg?branch=main)](https://github.com/Da-Smurf/booz.neocities.org/actions/workflows/build.yml)  
 Git repo for my [neocities](https://booz.neocities.org/) page.\
 This website uses [AutoSite-Legacy](https://github.com/dotcomboom/AutoSite-Legacy) for generating pages, and [Deploy to Neocities](https://github.com/marketplace/actions/deploy-to-neocities) for deployment to Neocities.
 
@@ -24,7 +25,7 @@ This website uses [AutoSite-Legacy](https://github.com/dotcomboom/AutoSite-Legac
         </tr>
         <tr>
                 <td> public/ </td>
-                <td> Archived </td>
+                <td> Archived / pages to be updated to page/</td>
         </tr>
         <tr>
                 <td> templates/ </td>

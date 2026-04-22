@@ -226,6 +226,23 @@ h4 time {
     -webkit-background-clip: text;
     }
   }
+/*
+┏━━━━━━━━━━━┓
+┃  WRITING  ┃
+┗━━━━━━━━━━━┛
+*/
+nav.changes {
+  margin: 5px 0;
+}
+
+nav.changes a {
+  display: inline;
+  margin: 0px;
+  background: none;
+  border-radius: 0px;
+  padding: 0px;
+  text-decoration: none;
+}
 
 /*
 ┏━━━━━━━━━━━┓

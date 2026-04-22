@@ -15,6 +15,10 @@ This website uses [AutoSite-Legacy](https://github.com/dotcomboom/AutoSite-Legac
                 <td> Files blacklisted by Neocities </td>
         </tr> 
         <tr>
+                <td> ignored/ </td>
+                <td> Files to be ignored by autosite </td>
+        </tr> 
+        <tr>
                 <td> includes/ </td>
                 <td> Files that autosite shouldn't interfer with </td>
         </tr>
@@ -31,3 +35,8 @@ This website uses [AutoSite-Legacy](https://github.com/dotcomboom/AutoSite-Legac
                 <td> Files autosite uses to build the contents of pages/ </td>
         </tr>
 </table>
+
+## TODO
+
+- FINALIZE about.html
+- fix mobile?

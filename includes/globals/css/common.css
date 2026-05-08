@@ -23,7 +23,7 @@ a:focus img {
     drop-shadow(-1px 1px 0 var(--gradientTop))
     drop-shadow(1px -1px 0 var(--gradientTop))
     drop-shadow(-1px -1px 0 var(--gradientTop));
-  cursor: url(/images/cursors/ArrowCursor.png), auto;
+  cursor: url(../images/cursors/ArrowCursor.png), auto;
 }
 
 nav textarea {
@@ -31,7 +31,7 @@ nav textarea {
   border-color: var(--gradientTop);
   background: var(--gradientBottom);
   color: var(--text);
-  cursor: url(/images/cursors/IBeamCursor.png), auto;
+  cursor: url(../images/cursors/IBeamCursor.png), auto;
 }
 
 /* div[id="navbar"] {

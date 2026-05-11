@@ -47,7 +47,13 @@
 }
 
 @font-face {
+    font-family: 'GenothetaEx';
+    src: url('GenothetaEx.woff2') format('woff2');
+    font-weight: 400;
+  }
+
+@font-face {
     font-family: 'Genotheta';
     src: url('Genotheta.woff2') format('woff2');
     font-weight: 400;
-  }
+}

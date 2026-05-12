@@ -244,6 +244,15 @@ nav.changes a {
   text-decoration: none;
 }
 
+nav.changes div.changes {
+  text-align: left;
+  font-size: 1rem;
+  margin: 0;
+  /*===*/
+  overflow: hidden scroll;
+  max-height: 250px;
+}
+
 /*
 ┏━━━━━━━━━━━┓
 ┃  FOOTER   ┃

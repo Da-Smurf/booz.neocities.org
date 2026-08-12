@@ -280,3 +280,14 @@ img[src$="alltalkandnobite.gif"] {
     grid-template-columns: repeat(2, max-content);
   }
 }
+
+/*
+footnote or somecrap.
+*/
+
+sup>a {
+  text-decoration: none;
+  &:visited {
+    color: lightblue;
+  }
+}

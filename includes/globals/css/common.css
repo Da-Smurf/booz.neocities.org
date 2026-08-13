@@ -269,4 +269,9 @@ sup>a {
   &:visited {
     color: lightblue;
   }
+  &:hover, &:focus {
+    letter-spacing: normal;
+    font-style: normal;
+    text-decoration: underline;
+  }
 }

@@ -9,21 +9,19 @@
   justify-content: center;
   gap: 4px;
   margin: 10px 35px;
-}
-
-.grid img {
-  width: 88px;
-  height: 31px;
-  display: block;
-}
-
-a img:hover,
-a:focus img {
-  filter: drop-shadow(1px 1px 0 var(--gradientTop))
-    drop-shadow(-1px 1px 0 var(--gradientTop))
-    drop-shadow(1px -1px 0 var(--gradientTop))
-    drop-shadow(-1px -1px 0 var(--gradientTop));
-  cursor: url(../images/cursors/ArrowCursor.png), auto;
+  img {
+    width: 88px;
+    height: 31px;
+    display: block;
+    &:hover {
+      filter: drop-shadow(1px 1px 0 var(--gradientTop)) drop-shadow(-1px 1px 0 var(--gradientTop)) drop-shadow(1px -1px 0 var(--gradientTop)) drop-shadow(-1px -1px 0 var(--gradientTop));
+      cursor: url(../images/cursors/ArrowCursor.png), auto;
+    }
+  }
+  >a:focus img {
+    filter: drop-shadow(1px 1px 0 var(--gradientTop)) drop-shadow(-1px 1px 0 var(--gradientTop)) drop-shadow(1px -1px 0 var(--gradientTop)) drop-shadow(-1px -1px 0 var(--gradientTop));
+    cursor: url(../images/cursors/ArrowCursor.png), auto;
+  }
 }
 
 nav textarea {
@@ -49,27 +47,21 @@ nav textarea {
 ┃   HOME    ┃
 ┗━━━━━━━━━━━┛
 */
-section[id^="marquee"],
-div[id^="marquee"] {
+section#marquee {
   overflow: hidden;
   width: 100%;
-}
-
-div[id="track"] {
-  display: flex;
-  gap: 8px;
-  width: max-content;
-
-  animation: scroll 30s linear infinite;
-}
-
-div[id="track"] img {
-  height: 31px;
-}
-
-section[id^="marquee"]:hover div[id="track"],
-div[id^="marquee"]:hover div[id="track"] {
-  animation-play-state: paused;
+  div#track {
+    display: flex;
+    gap: 8px;
+    width: max-content;
+    animation: scroll 30s linear infinite;
+    img {
+      height: 31px;
+    }
+  }
+  &:hover div#track {
+    animation-play-state: paused;
+  }
 }
 
 .hoverable {
@@ -87,14 +79,10 @@ div[id^="marquee"]:hover div[id="track"] {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   transition: all 0.2s ease;
-}
-.hoverable:hover,
-.fancy-text:focus {
-  -webkit-text-fill-color: white;
-  background: none;
-}
-h4 time {
-  color: var(--text);
+  &:hover {
+    -webkit-text-fill-color: white;
+    background: none;
+  }
 }
 
 @keyframes scroll {
@@ -111,44 +99,41 @@ h4 time {
 ┃  SOCIAL   ┃
 ┗━━━━━━━━━━━┛
 */
-    .tooltip {
+.tooltip {
   position: relative;
   display: inline-block;
-}
+  .tooltip-text {
+    visibility: hidden;
+    width: 120px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
 
-.tooltip .tooltip-text {
-  visibility: hidden;
-  width: 120px;
-  background-color: #555;
-  color: #fff;
-  text-align: center;
-  padding: 5px 0;
-  border-radius: 6px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
 
-  position: absolute;
-  z-index: 1;
-  bottom: 125%;
-  left: 50%;
-  margin-left: -60px;
-
-  opacity: 0;
-  transition: opacity 0.3s;
-}
-
-.tooltip .tooltip-text::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  margin-left: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: #555 transparent transparent transparent;
-}
-
-.tooltip:hover .tooltip-text {
-  visibility: visible;
-  opacity: 1;
+    opacity: 0;
+    transition: opacity 0.3s;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      margin-left: -5px;
+      border-width: 5px;
+      border-style: solid;
+      border-color: #555 transparent transparent transparent;
+    }
+  }
+  &:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+  }
 }
 
 .sociallink {
@@ -170,23 +155,20 @@ h4 time {
     justify-content: center;
     margin: 10px 12px;
     gap: 2px;
-  }
 
-  @media (max-width: 900px) {
-   div.extrabutt {
+    @media (max-width: 900px) {
      grid-template-columns: repeat(7, max-content);
      margin: unset;
      gap: unset;
-   }
-  }
+    }
 
-  @media (max-width: 600px) {
-   div.extrabutt {
+    @media (max-width: 600px) {
      grid-template-columns: repeat(4, max-content);
      margin: unset;
      gap: unset;
-   }
+    }
   }
+
   /* prophecy thing */
   span.deltaprophecy {
    background: -webkit-linear-gradient(330deg, #073cfe, #3a8eff, #4ec2f5, #7bffff, #4ec2f5, #3a8eff, #073cfe);
@@ -233,24 +215,25 @@ h4 time {
 */
 nav.changes {
   margin: 5px 0;
-}
-
-nav.changes a {
-  display: inline;
-  margin: 0px;
-  background: none;
-  border-radius: 0px;
-  padding: 0px;
-  text-decoration: none;
-}
-
-nav.changes div.changes {
-  text-align: left;
-  font-size: 1rem;
-  margin: 0;
-  /*===*/
-  overflow: hidden scroll;
-  max-height: 250px;
+  a {
+    display: inline;
+    margin: 0px;
+    background: none;
+    border-radius: 0px;
+    padding: 0px;
+    text-decoration: none;
+  }
+  div.changes {
+    text-align: left;
+    font-size: 1rem;
+    margin: 0;
+    /*===*/
+    overflow: hidden scroll;
+    max-height: 250px;
+    time {
+      color: var(--text);
+    }
+  }
 }
 
 /*
@@ -258,27 +241,23 @@ nav.changes div.changes {
 ┃  FOOTER   ┃
 ┗━━━━━━━━━━━┛
 */
-footer div[id="blinkies"] {
+footer div#blinkies {
   display: grid;
   justify-content: center;
   gap: 2px;
   grid-template-columns: repeat(5, max-content);
+
+  @media (max-width: 900px) {
+    grid-template-columns: repeat(3, max-content);
+  }
+
+  @media (max-width: 600px) {
+    grid-template-columns: repeat(2, max-content);
+  }
 }
 
 img[src$="alltalkandnobite.gif"] {
   width: 150px; /* set the stupid griefer thing */
-}
-
-@media (max-width: 900px) {
-  footer div[id="blinkies"] {
-    grid-template-columns: repeat(3, max-content);
-  }
-}
-
-@media (max-width: 600px) {
-  footer div[id="blinkies"] {
-    grid-template-columns: repeat(2, max-content);
-  }
 }
 
 /*

@@ -6,7 +6,7 @@ div.image-container {
         margin: 5px;
         border: 1px solid var(--border);
         width: 550px;
-        &:hover {
+        &:hover, &:focus-within {
             border: 1px solid var(--gradientTop);
         }
         a > img {

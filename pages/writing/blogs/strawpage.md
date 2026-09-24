@@ -4,7 +4,26 @@
 
 <section class="large">
 <i class="ri-arrow-go-back-fill"></i> <a href="[#root#]home/index.html">go back</a>
-<p style="text-align:right;"><small>last updated on [#modified#]</small></p>
-
-
+<p>sorted from newest to oldest</p><p style="text-align:right;"><small>last seen on [#modified#]</small></p>
+<hr>
+<div class="image-container">
+    <!--
+    <div class="image-content">
+        <img src="[#root#]globals/images/writings/straws/" alt="" loading="lazy">
+        <div class="image-text">example caption</div>
+    </div>
+    -->
+    <div class="image-content">
+        <img src="[#root#]globals/images/writings/straws/mathform.png" alt="integral math formula" loading="lazy">
+        <div class="image-text">am i supposed to solve this... wth...</div>
+    </div>
+    <div class="image-content">
+        <img src="[#root#]globals/images/writings/straws/asstw.png" alt="this is fucking ass twin" loading="lazy">
+        <div class="image-text"><img style="width:60%;" src="https://media1.tenor.com/m/xoerR96Wm9AAAAAC/okay-ralsei.gif" loading="lazy" alt="okay ralsei deltarune meme"></div>
+    </div>
+    <div class="image-content">
+        <img src="[#root#]globals/images/writings/straws/fish.png" alt="FISH" loading="lazy">
+        <div class="image-text">🐟🐟🐟🐠🐠🐡🐡🐡 "im yonkagor and i like fish!"</div>
+    </div>
+</div>
 </section>

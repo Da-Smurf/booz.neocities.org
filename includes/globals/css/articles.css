@@ -6,10 +6,13 @@ div.image-container {
         margin: 5px;
         border: 1px solid var(--border);
         width: 550px;
+        &:is(.straw) {
+            width: 320px;
+        }
         &:hover, &:focus-within {
             border: 1px solid var(--gradientTop);
         }
-        a > img {
+        a > img, a img, >img {
             width: 100%;
             height: auto;
         }
@@ -19,6 +22,12 @@ div.image-container {
         }
         @media (max-width: 600px) {
             width: auto;
+            &:is(.straw) {
+                width: auto;
+            }
+            >img {
+                width: auto;
+            }
         }
     }
 }
